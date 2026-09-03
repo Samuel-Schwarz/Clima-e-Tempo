@@ -8,21 +8,12 @@
 body
     {
         font-family: Arial, sans-serif;
-        background-color: #79beff;
+        background-color: #80b7ff;
         color: rgb(0, 21, 112);
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-    }
-
-.container
-    {
-        background-color: white;
-        padding: 40px;
-        border-radius: 15px;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
 
 h1
@@ -37,13 +28,28 @@ h1
         gap: 10px;
     }
 
+/* Tela de celular */
+
+.container
+    {
+        background-color: white;
+        padding: 80px;
+        width: 100%;
+        border-radius: 75px;
+        text-align: center;
+        box-shadow: 0 20px 75px rgba(0, 0, 0, 0.15);
+        box-sizing: border-box;
+        font-size: large;
+    }
+
 input
     {
-        width: 250px;
-        padding: 12px;
+        width: 100%;
+        padding: 50px 70px;
         border: 1p solid #aaa;
-        border-radius: 8px;
-        font-size: 16px;
+        border-radius: 40px;
+        font-size: 200px;
+        min-height: 100px;
     }
 
 input:hover
@@ -53,17 +59,69 @@ input:hover
 
 button
     {
-        padding: 12px 20px;
+        width: 100%;
+        padding: 50px 70px;
         border: none;
-        border-radius: 8px;
+        border-radius: 40px;
         background-color: aqua;
         color: rgb(11, 0, 105);
-        font-size: 16px;
+        font-size: 200px;
         cursor: pointer;
+        min-height: 100px;
+        margin-top: 40px;
     }
 
 button:hover
     {
         background-color: rgb(0, 80, 80);
         color: #ffffff;
+    }
+
+/* A partir de 600px. tela de pc */
+@media (min-width: 600px)
+    {
+
+    .container
+        {
+            background-color: white;
+            padding: 32px;
+            max-width: 480px;
+            margin: 0 auto;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            box-sizing: border-box;
+        }
+
+    input
+        {
+            width: 70%;
+            padding: 12px;
+            border: 1p solid #aaa;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+    input:hover
+        {
+            background-color: #dddddd;
+        }
+
+    button
+        {
+            width: 20%;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: aqua;
+            color: rgb(11, 0, 105);
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    button:hover
+        {
+            background-color: rgb(0, 80, 80);
+            color: #ffffff;
+        }
     }
